@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>E-Master</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/selection.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+              <nav class="navbar">
+                <div class="navbar-left">
+                  <img src="images/pic12.jpg" alt="Logo" class="logo">
+                  <span class="brand-name"><a href="">E-Master</a></span>
+                </div>
+                <div class="navbar-right">
+                  <div class="icon-container">
+                  <a href=""> <i class="fa-solid fa-bell" id="icon"></i></a> 
+                  <a href=""> <i class="fa-solid fa-message" id="icon"></i></a> 
+                  </div>
+                  <div class="profile-menu">
+                    <img src="images/user.png" alt="Profile" class="profile-pic">
+                   <span class="profile-name">yahia louai</span>
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li><a href="profile.html"><i class="fa-regular fa-user"></i>  Profile</a></li>
+                        <li><a href="modifier.html"><i class="fa-regular fa-pen-to-square"></i>  Modifier profiel</a></li>
+                        
+                        <li><a href="#logout"><i class="fa-solid fa-right-to-bracket"></i> Deconnexion</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <header style="border-bottom: solid 5px #3a7e3e;"></header>
+
+
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<p>Après avoir consulté et analysé les projets disponibles, veuillez remplir le formulaire ci-dessous:</p>
+									</header>
+
+									<!-- Content -->
+										
+										<div class="form">
+                      <div class="title-div">
+                        <h2>Formulaire</h2>
+                        <p>Vous pouvez utiliser cette formulaire pour choisir votre binôme ou trinôme, ainsi que le projet sur lequel vous souhaitez travailler.</p>
+                        <p id="required">*Requis</p>
+                      </div>
+                  
+                      <div class="name-div">
+                        <div class="name">Nom:<span class="required">*</span></div>
+                        <div class="input-div"><input type="input" name="answer" placeholder="Ecrire votre nom"></div>
+                      </div>
+                  
+                      <div class="college-div">
+                        <div class="name">Prenom:<span class="required">*</span></div>
+                        <div class="input-div"><input type="input" name="answer" placeholder="Ecrire votre prenom"></div>
+                      </div>
+                  
+                      <div class="gmail-div">
+                        <div class="name">Specialite:<span class="required">*</span></div>
+                        <div class="input-div"><input type="input" name="answer" placeholder="Ecrire votre Specialite"></div>
+                      </div>
+                  
+                      <div class="mobile-div">
+                        <div class="name">Choisissez le nombre de l'équipe:<span class="required">*</span></div>
+                        <div class="chek1">
+                        <input type="radio" id="solo" name="group" value="solo" onclick="showForm('solo')"      > Monôme <br>
+                      
+                              <input type="radio" id="pair" name="group" value="pair" onclick="showForm('pair')" > Binôme <br> 
+                              <input type="radio" id="trio" name="group" value="trio" onclick="showForm('trio')" > Trinôme <br>
+                        </div>
+                      </div>
+                  
+                      <!-- Formulaire Binôme -->
+                      <div id="binome-form" class="hidden">
+                        <label for="name1" class="bin">Prénom de etudiant2:</label>
+                        <input type="text" id="name1" placeholder="Entrez votre prénom" class="input-bin"> <br>
+                        <label for="surname1" class="bin">Nom de etudiant2:</label>
+                        <input type="text" id="surname1" placeholder="Entrez votre nom" class="input-bin">
+                      </div>
+                  
+                      <!-- Formulaire Trinôme -->
+                      <div id="trio-form" class="hidden">
+                        <label for="name2" class="bin2">Prénom de etudiant2:</label>
+                        <input type="text" id="name2" placeholder="Entrez votre prénom" class="input-bin2"><br>
+                        <label for="surname2"class="bin2">Nom de etudiant2:</label>
+                        <input type="text" id="surname2" placeholder="Entrez votre nom" class="input-bin2"><br>
+                        <label for="name3" class="bin2">Prénom de etudiant3:</label>
+                        <input type="text" id="name3" placeholder="Entrez votre prénom" class="input-bin2"><br>
+                        <label for="surname3" class="bin2">Nom de etudiant3:</label>
+                        <input type="text" id="surname3" placeholder="Entrez votre nom" class="input-bin2"><br>
+                      </div>
+                  
+                  
+                  
+                  
+                      <div class="mobile-div1">
+                        <div class="name">Si vous ne connaissez aucun des étudiants, cliquez ic:<span class="required">*</span>
+                              <input type="checkbox" id="pair" name="group" value="pair" onclick="showSoloList()"></div>
+                            
+                      </div>
+                  
+                      <div id="solo-list" class="hidden">
+                        <button><a href="liste.html">Voir la liste des étudiants</a></button>
+                      </div>
+                    
+                    
+                      <div class="mobile-div2">
+                        <div class="name">Veuillez classer les projets selon votre préférence, de 1 en tant que plus important à 4 en 
+                          tant que <span class="required">*</span><br>
+                        
+                          
+                          <label>1. Projet 1:</label>
+                           1 <input type="radio" name="project1" value="1">  
+                           2 <input type="radio" name="project1" value="2"> 
+                           3 <input type="radio" name="project1" value="3"> 
+                           4 <input type="radio" name="project1" value="4">
+                          
+                    
+                           <br> <br>
+                          
+                           <label>2. Projet 2:</label>
+                           1 <input type="radio" name="project2" value="1"> 
+                           2 <input type="radio" name="project2" value="2"> 
+                           3 <input type="radio" name="project2" value="3"> 
+                           4 <input type="radio" name="project2" value="4">
+                        
+                    
+                          <br> <br>
+                          
+                            <label>3. Projet 3:</label>
+                           1 <input type="radio" name="project3" value="1">  
+                           2 <input type="radio" name="project3" value="2"> 
+                           3 <input type="radio" name="project3" value="3"> 
+                           4 <input type="radio" name="project3" value="4">  
+                          
+                  
+                            <br> <br>
+                      
+                          
+                          <label>4. Projet 4:</label>
+                           1 <input type="radio" name="project4" value="1"> 
+                           2 <input type="radio" name="project4" value="2"> 
+                           3 <input type="radio" name="project4" value="3"> 
+                           4 <input type="radio" name="project4" value="4"> 
+                          
+                    
+                          
+                          
+                      </div>
+                      </div>
+                  
+                      <div>
+                        <input class="btn" type="submit" name="Submit">
+                      </div>
+                  
+                      <div class="last-div">
+                        <p class="never">Ne jamais soumettre de mots de passe via Google Forms.</p>
+                        <p class="term">Ce contenu n'est ni créé ni approuvé par Google. Signaler un abus - Conditions d'utilisation - Politique de confidentialité.</p>
+                      </div>
+      	
+												
+										</div>
+
+								</section>
+
+						</div>
+					</div>
+
+          <div id="sidebar">
+            <div class="inner">
+  
+  
+              <!-- Search -->
+                <section id="search" class="alt">
+                  <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                  </form>
+                </section>
+  
+              <!-- Menu -->
+                <nav id="menu">
+                  <header class="major">
+                    <h2>Gestion des Projet</h2>
+                  </header>
+                  <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li>
+                      <span class="opener">Exploration et candidature</span>
+                      <ul>
+                        <li class="liste"><a href="consulterProj.html">Consulter les projets</a></li>
+                        <li class="liste"><a href="selection.html"> la sélection de projets et équipes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="condidateur.html"> Mes candidatures</a></li>
+                    
+                    <li>
+                      <span class="opener">Communication et collaboration</span>
+                      <ul>
+                        <li class="liste"><a href="message.html"> Message</a></li>
+                        <li class="liste"><a href="historique.html">Historique des échanges</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="satistique.html">Statistiques et tableau de bord</a></li>
+                  </ul>
+                </nav>
+											
+
+							
+
+                <section>
+                  <header class="major">
+                    <h2>Contact</h2>
+                  </header>
+                  <ul class="contact">
+                    <li class="icon solid fa-envelope"><a href="#"> support@plateforme-projets.com</a></li>
+                    <li class="icon solid fa-phone"> Téléphone : +213 555 123 456</li>
+                  </ul>
+                </section>
+  
+                <!-- Footer -->
+                  <footer id="footer">
+                    <p>© 2024 Plateforme Projets - Tous droits réservés</p>
+                  </footer>
+
+						
+					</div>
+
+			</div>
+    
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+          document.getElementById('binome-form').style.display = 'none';
+          document.getElementById('trio-form').style.display = 'none';
+          document.getElementById('solo-list').style.display = 'none';
+  });
+        // Function to show the appropriate form based on radio button selection
+        function showForm(groupType) {
+          // Hide both forms initially
+          document.getElementById('binome-form').style.display = 'none';
+          document.getElementById('trio-form').style.display = 'none';
+      
+          // Show the selected form
+          if (groupType === 'pair') {
+            document.getElementById('binome-form').style.display = 'block'; // Show Binôme form
+          } else if (groupType === 'trio') {
+            document.getElementById('trio-form').style.display = 'block'; // Show Trinôme form
+          }
+        }
+      
+        // Function to show the solo student list
+        function showSoloList() {
+          const soloList = document.getElementById('solo-list');
+          soloList.style.display = 'block'; // Show the list of solo students
+        }
+      
+        // Profile menu toggle logic
+        document.addEventListener("DOMContentLoaded", () => {
+          const profileMenu = document.querySelector(".profile-menu");
+          const dropdownMenu = document.querySelector(".dropdown-menu");
+      
+          if (profileMenu) {
+            profileMenu.addEventListener("click", () => {
+              dropdownMenu.style.display =
+                dropdownMenu.style.display === "block" ? "none" : "block";
+            });
+      
+            window.addEventListener("click", (e) => {
+              if (!profileMenu.contains(e.target)) {
+                dropdownMenu.style.display = "none";
+              }
+            });
+          }
+        });
+      </script>
+
+    </div>  
+
+  </body>
+</html>
+
+      

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Plateforme Projets</title>
+    <link rel="stylesheet" href="login.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+  
+  <div class="navbar-left">
+    <img src="images/pic12.jpg" alt="Logo" class="logo">
+    <span class="brand-name"><a href="">E-Master</a></span>
+  </div>
+    
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                <span id="emailError" class="error-message">Veuillez utiliser une adresse email universitaire valide (ex: @univ-constantine2.dz).</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <button type="submit" class="btn">Se connecter</button>
+            <p class="register-link">Pas encore inscrit ? <a href="register.html">Créer un compte</a></p>
+        </form>
+    </div>
+
+    <script>
+        // Validation de l'adresse email
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        loginForm.addEventListener('submit', function(event) {
+            const emailValue = emailInput.value;
+            const emailDomain = "@univ-constantine2.dz"; // Domaine universitaire attendu
+
+            // Vérifie si l'email se termine par le domaine spécifique
+            if (!emailValue.endsWith(emailDomain)) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+                emailError.style.display = 'block';
+            } else {
+                emailError.style.display = 'none';
+                alert("Connexion réussie. Bienvenue !"); // Simulation de succès
+            }
+        });
+    </script>
+</body>
+</html>
